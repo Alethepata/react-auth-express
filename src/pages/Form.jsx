@@ -1,12 +1,10 @@
 import { useEffect, useState } from 'react';
 
-import axios from "axios";
+import axios from "../utils/axiosClient";
 
 import {usePosts} from "../contexts/PostsContext"
 import { useParams } from 'react-router-dom';
 
-
-const apiBaseUrl = import.meta.env.VITE_BASE_API_URL;
 
 function Form() {
 
@@ -28,7 +26,7 @@ function Form() {
     }
     
     useEffect(() => {
-      getPost(`${apiBaseUrl}/posts/${slug}`)
+      getPost(`/posts/${slug}`)
     }, [slug])
 
 
@@ -72,7 +70,7 @@ function Form() {
         //     editPost(`${apiBaseUrl}/posts`, postData)
         // }
 
-        addPost(`${apiBaseUrl}/posts`, postData);
+        addPost('/posts', postData);
 
         setPostData(dataDefault);
 

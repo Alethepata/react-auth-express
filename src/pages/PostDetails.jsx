@@ -1,8 +1,6 @@
-import axios from "axios";
+import axios from "../utils/axiosClient";
 import { useEffect, useState } from "react";
-import { Link, Navigate, useParams } from "react-router-dom";
-
-const apiBaseUrl = import.meta.env.VITE_BASE_API_URL
+import { Link, useParams } from "react-router-dom";
 
 
 function PostDetails(){
@@ -21,7 +19,7 @@ function PostDetails(){
   }
   
   useEffect(() => {
-    getPost(`${apiBaseUrl}/posts/${slug}`)
+    getPost(`/posts/${slug}`)
   }, [slug])
 
   return(

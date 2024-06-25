@@ -1,9 +1,7 @@
-import axios from "axios";
+import axios from "../utils/axiosClient";
 import { useState, useEffect } from "react";
 import Card from "../components/partials/Card";
 import { Link } from "react-router-dom";
-
-const baseApiUrl = import.meta.env.VITE_BASE_API_URL
 
 function Posts(){
   const [posts, setPosts] = useState([]);
@@ -13,7 +11,7 @@ function Posts(){
     setPosts(data.data)
   }
   useEffect(() =>{
-    getPosts(`${baseApiUrl}/posts`)
+    getPosts('/posts')
   },[])
   return(
     <div className="container">
