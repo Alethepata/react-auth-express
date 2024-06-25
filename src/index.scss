@@ -1,0 +1,141 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+
+.margin{
+    margin: 5px 0;
+}
+
+li{
+    list-style: none ;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.container{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+header{
+    background-color: beige;
+    nav{
+        padding: 20px 30px;
+        menu{
+            display:flex;
+            justify-content: space-between;
+            div:first-child{
+                display: flex;
+                gap:20px;
+            }
+            li{
+                button{
+                    background: none;
+                    border: none;
+                    font-size: 16px;
+                    font-family: 'Times New Roman', Times, serif;
+                }
+                a{
+                    &.active{
+                        text-decoration: underline;
+                        text-decoration-color: rgb(0, 23, 128);
+                        text-underline-offset: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+main{
+    padding: 30px 0;
+}
+
+footer{
+    width: 100%;
+    padding: 20px;
+    background-color: beige;
+}
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    .card{
+        width: 250px;
+        border: 1px solid black;
+        border-radius: 30px;
+        overflow: hidden;
+        figure{
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+        .text{
+            padding: 20px;
+            .title{
+                display: flex;
+                justify-content: space-between;
+                span{
+                    color: red;
+                }
+            }
+            .description{
+                margin: 15px 0;
+                height: 100px;
+                overflow-y: auto;
+            }
+            span{
+                text-transform: capitalize;
+            }
+
+            .tags{
+                span{
+                    margin-right: 10px;
+                }
+            }
+
+            .action{
+                margin-top: 15px;
+                background-color: rgb(115, 115, 214);
+                width: 80px;
+                height: 30px;
+                text-align: center;
+                line-height: 30px;
+                a{
+                    color:white;
+                }
+            }
+
+        }
+    }
+
+}
+
+form{
+    padding: 20px 0;
+    label{
+        display: block;
+        margin-bottom: 5px;
+    }
+    input, button, textarea, select{
+        box-shadow: 5px 5px 5px rgb(153, 153, 153);
+        border: 1px solid rgb(182, 174, 174);   
+        background-color: white;
+        padding: 5px 10px;
+        border-radius: 10px;
+    }
+    button{
+        margin: 15px 0;
+    }
+    .check{
+        display: flex;
+        gap: 10px;
+    }
+}
